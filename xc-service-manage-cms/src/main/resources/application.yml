@@ -1,0 +1,14 @@
+server:
+  port: 31001
+
+spring:
+  application:
+    name: xc-service-manage-cms
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017
+      database: cms
+  freemarker:
+    settings:
+      template_update_delay: 0
+    cache: false
