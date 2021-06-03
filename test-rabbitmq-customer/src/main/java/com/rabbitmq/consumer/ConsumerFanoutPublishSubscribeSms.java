@@ -15,10 +15,10 @@ public class ConsumerFanoutPublishSubscribeSms {
 
     public static void main(String[] args) {
         ConnectionFactory connectionFactory = new ConnectionFactory();
-        connectionFactory.setHost("192.168.1.135");
+        connectionFactory.setHost("172.0.0.1");
         connectionFactory.setPort(5672);
-        connectionFactory.setUsername("mark");
-        connectionFactory.setPassword("mark");
+        connectionFactory.setUsername("guest");
+        connectionFactory.setPassword("guest");
         connectionFactory.setVirtualHost("/");
 
         Connection connection = null;

@@ -19,13 +19,13 @@ public class ProducerDirectRouting {
     public static void main(String[] args) {
         ConnectionFactory connectionFactory = new ConnectionFactory();
         connectionFactory.setVirtualHost("/");
-        connectionFactory.setHost("192.168.1.135");
+        connectionFactory.setHost("172.0.0.1");
         if (args.length > 0) {
             connectionFactory.setHost(args[0]);
         }
         connectionFactory.setPort(5672);
-        connectionFactory.setUsername("mark");
-        connectionFactory.setPassword("mark");
+        connectionFactory.setUsername("guest");
+        connectionFactory.setPassword("guest");
         connectionFactory.setVirtualHost("/");
 
         Connection connection = null;

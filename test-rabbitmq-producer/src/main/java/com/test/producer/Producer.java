@@ -24,10 +24,10 @@ public class Producer {
 
         //配置 IP 虚拟机 用户名  密码
         ConnectionFactory factory = new ConnectionFactory();
-        factory.setHost("192.168.1.135");
+        factory.setHost("127.0.0.1");
         factory.setPort(5672);
-        factory.setUsername("mark");
-        factory.setPassword("mark");
+        factory.setUsername("guest");
+        factory.setPassword("guest");
         factory.setVirtualHost("/");
 
         Connection connection = null;

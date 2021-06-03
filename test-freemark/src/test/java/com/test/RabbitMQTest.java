@@ -1,5 +1,7 @@
 package com.test;
 
+import com.xuecheng.test.freemarker.FreemarkerTestApplication;
+
 import com.xuecheng.test.freemarker.config.RabbitMQConfig;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -11,7 +13,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 /**
  * created by wangzexu on 4/12/21
  */
-@SpringBootTest
+@SpringBootTest(classes = FreemarkerTestApplication.class)
 @RunWith(SpringRunner.class)
 public class RabbitMQTest {
 
@@ -21,9 +23,9 @@ public class RabbitMQTest {
 
     @Test
     public void testSendByTopics(){
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < 100; i++) {
             String message = "sms email inform to user "+i;
-            rabbitTemplate.convertAndSend(RabbitMQConfig.EXCHANGE_TOPICS_INFORM, "inform.sms.email", message);
+            rabbitTemplate.convertAndSend(RabbitMQConfig.EXCHANGE_TOPICS_INFORM, "inform.email", message);
             System.out.println("Send Message is "+message);
         }
     }

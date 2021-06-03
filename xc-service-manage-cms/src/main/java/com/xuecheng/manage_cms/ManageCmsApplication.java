@@ -17,6 +17,8 @@ import org.springframework.web.client.RestTemplate;
 @ComponentScan(basePackages = {"com.xuecheng.manage_cms"})// scan all class in this project
 @ComponentScan(basePackages = "com.xuecheng.framework") //扫描common工程下的类
 public class ManageCmsApplication {
+
+
     public static void main(String[] args) {
         SpringApplication.run(ManageCmsApplication.class, args);
 
@@ -26,6 +28,7 @@ public class ManageCmsApplication {
     public RestTemplate restTemplate() {
         return new RestTemplate(new OkHttp3ClientHttpRequestFactory());
     }
+
 
 
 }

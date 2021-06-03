@@ -1,5 +1,7 @@
 package com.xuecheng.framework.domain.course;
 
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.ToString;
 import org.hibernate.annotations.GenericGenerator;
@@ -15,12 +17,14 @@ import java.io.Serializable;
 @Entity
 @Table(name="teachplan")
 @GenericGenerator(name = "jpa-uuid", strategy = "uuid")
+@ApiModel(value = "课程计划")
 public class Teachplan implements Serializable {
     private static final long serialVersionUID = -916357110051689485L;
     @Id
     @GeneratedValue(generator = "jpa-uuid")
     @Column(length = 32)
     private String id;
+    @ApiModelProperty(value = "计划名称")
     private String pname;
     private String parentid;
     private String grade;

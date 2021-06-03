@@ -18,10 +18,10 @@ public class Consumer {
     public static void main(String[] args) {
         ConnectionFactory connectionFactory = new ConnectionFactory();
         //设置工厂的 IP 用户名 密码 虚拟机
-        connectionFactory.setHost("192.168.1.135");
+        connectionFactory.setHost("172.0.0.1");
         connectionFactory.setPort(5672);
-        connectionFactory.setUsername("mark");
-        connectionFactory.setPassword("mark");
+        connectionFactory.setUsername("guest");
+        connectionFactory.setPassword("guest");
         connectionFactory.setVirtualHost("/");
 
         //获取资源 结束代码时释放资源

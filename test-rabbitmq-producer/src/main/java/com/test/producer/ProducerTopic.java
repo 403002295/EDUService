@@ -24,10 +24,10 @@ public class ProducerTopic {
         try{
             //创建一个连接工厂  工厂模式的左作用就是对于多个重复需要的对象进行 工厂创建 配置一次多次使用
             ConnectionFactory connectionFactory = new ConnectionFactory();
-            connectionFactory.setHost("192.168.1.135");
+            connectionFactory.setHost("172.0.0.1");
             connectionFactory.setPort(5672);
-            connectionFactory.setUsername("mark");
-            connectionFactory.setPassword("mark");
+            connectionFactory.setUsername("guest");
+            connectionFactory.setPassword("guest");
             connectionFactory.setVirtualHost("/");
 
 

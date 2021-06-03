@@ -1,11 +1,12 @@
 package com.xuecheng.test.freemarker.rabbitmq.consumer;
 
+import com.rabbitmq.client.Channel;
 import com.xuecheng.test.freemarker.config.RabbitMQConfig;
 import org.springframework.amqp.core.Message;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.stereotype.Component;
 
-import java.nio.channels.Channel;
+;
 
 /**
  * created by wangzexu on 4/12/21
